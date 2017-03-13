@@ -14,10 +14,10 @@
 #    along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 
 CC     = gcc
-CFLAGS =
+CFLAGS = -g -w -std=c99
 
 LN     = gcc
-LNFLAGS=
+LNFLAGS= -g -w -std=c99
 
 RM     = rm -rf
 
@@ -26,7 +26,9 @@ TESTEXE=tests
 
 OBJ=\
 yla_stack.o\
-yla_vm.o
+yla_vm.o\
+yla_compliance_table.o\
+yla_array.o
 
 MAINOBJ=yla_vm_main.o
 
@@ -36,7 +38,6 @@ yla_test_test.o\
 yla_stack_test.o\
 yla_test_gencode.o\
 yla_vm_test1.o
-
 
 .SUFFIXES: .o .c
 .PHONY: clean test
